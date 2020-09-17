@@ -1,0 +1,220 @@
+{
+	"info": {
+		"_postman_id": "43aa78de-ef87-401c-9b44-80b9837aed4b",
+		"name": "lo enviamos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get_sitten",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://budegom.com/public/api/get-settings",
+					"protocol": "https",
+					"host": [
+						"budegom",
+						"com"
+					],
+					"path": [
+						"public",
+						"api",
+						"get-settings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "registrar_boodegoom_register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"id\": null,\r\n\"name\": \"Leydey\",\r\n\"email\": \"bengolea@2cloud.pe\",\r\n\"phone\": \"+5198774663\",\r\n\"password\": \"12345678\",\r\n\"default_address\": 0\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://budegom.com/public/api/register",
+					"protocol": "https",
+					"host": [
+						"budegom",
+						"com"
+					],
+					"path": [
+						"public",
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "registrar_boodegoom_guaradar_Direccion",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n    \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2J1ZGVnb20uY29tL3B1YmxpYy9hcGkvcmVnaXN0ZXIiLCJpYXQiOjE1OTI5NDE1MjAsIm5iZiI6MTU5Mjk0MTUyMCwianRpIjoiRXliVTAyYzdrVVdIcjQ1TCIsInN1YiI6MzEwLCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.uxQczUuegEF8z-xm-WcWnCBNEfqybipc77ZUN6vaSis\",\r\n        \"user_id\": 310,\r\n        \"latitude\": -13.6218074,\r\n        \"longitude\": -72.8759998,\r\n        \"address\": \"av. tupac amaru\",\r\n        \"house\": 123,\r\n        \"tag\": \"casa 1\",\r\n        \"get_only_default_address\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://budegom.com/public/api/save-address",
+					"protocol": "https",
+					"host": [
+						"budegom",
+						"com"
+					],
+					"path": [
+						"public",
+						"api",
+						"save-address"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "registrar_boodegoom_generar_orden",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n        \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2J1ZGVnb20uY29tL3B1YmxpYy9hcGkvcmVnaXN0ZXIiLCJpYXQiOjE1OTI5NDE1MjAsIm5iZiI6MTU5Mjk0MTUyMCwianRpIjoiRXliVTAyYzdrVVdIcjQ1TCIsInN1YiI6MzEwLCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.uxQczUuegEF8z-xm-WcWnCBNEfqybipc77ZUN6vaSis\",\r\n        \"user\": [{\r\n\r\n                \"data\":[{\r\n                    \"id\":310,\r\n                    \"default_address\":{\r\n                    \"lat\":\"-12.176366\",\r\n                    \"lng\":\"-77.0119218\",\r\n                    \"address\":\"Avenida, Av Paseo de la Rep\\u00fablica 1353, Chorrillos 15064, Peru\",\r\n                    \"house\":\"arriba del primero\",\r\n                    \"tag\":\"casa\"\r\n                }                \r\n                 } ]\r\n\r\n          }  ],\r\n        \"order\":[ {\r\n            \"restaurant_id\": 34,\r\n            \"id\": 260,\r\n            \"quantity\":1,\r\n            \"name\": \"Provoleta Characata con chorizo\",\r\n            \"price\":35,\r\n            \"addon_id\": null\r\n            }],\r\n        \"coupon\": null,\r\n        \"location\": {\r\n            \"lat\":\"-12.176366\",\r\n            \"lng\":\"-77.0119218\",\"address\":\"Avenida, Av Paseo de la Rep\\u00fablica 1353, Chorrillos 15064, Peru\",\"house\":\"arriba del primero\",\"tag\":\"casa\"},\r\n\t\t\"order_comment\": \"delicias \",\r\n        \"total\": 56,\r\n\t\t\"method\": \"COD\",\r\n\t\t\"payment_token\": null,\r\n\t\t\"delivery_type\": 1,\r\n\t\t\"partial_wallet\": null\r\n      \r\n      \r\n}\r\n\t",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://budegom.com/public/api/place-order",
+					"protocol": "https",
+					"host": [
+						"budegom",
+						"com"
+					],
+					"path": [
+						"public",
+						"api",
+						"place-order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "registrar_boodegoom_Eliminar_direccion",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n         \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2J1ZGVnb20uY29tL3B1YmxpYy9hcGkvcmVnaXN0ZXIiLCJpYXQiOjE1OTI5NDE1MjAsIm5iZiI6MTU5Mjk0MTUyMCwianRpIjoiRXliVTAyYzdrVVdIcjQ1TCIsInN1YiI6MzEwLCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.uxQczUuegEF8z-xm-WcWnCBNEfqybipc77ZUN6vaSis\",\r\n        \"user_id\": 310,\r\n        \"address_id\": 349\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://budegom.com/public/api/delete-address",
+					"protocol": "https",
+					"host": [
+						"budegom",
+						"com"
+					],
+					"path": [
+						"public",
+						"api",
+						"delete-address"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "registrar_boodegoom_Update",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"id\": null,\r\n\"name\": \"Leydey\",\r\n\"email\": \"lbengolea@2cloud.pe\",\r\n\"phone\": \"988774663\",\r\n\"password\": \"$2y$10$Ua/BHuUWpuDKt1JtZ6TIe./YAgOXStRfzcvwWWK1rkoXgNY63KsnO\",\r\n\"default_address\": {\r\n    \"address\": \"Unnamed Road, Cercado de Lima 15046, Peru\", \r\n    \"house\": \"456\", \r\n    \"latitude\": \"-12.0709585\", \r\n    \"longitude\": \"-77.0340339\", \r\n    \"tag\": \"trabajo\"\r\n    }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://budegom.com/public/api/register",
+					"protocol": "https",
+					"host": [
+						"budegom",
+						"com"
+					],
+					"path": [
+						"public",
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "registrar_boodegoom_Update Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"id\": null,\r\n\"name\": \"Leydey\",\r\n\"email\": \"lbengolea@2cloud.pe\",\r\n\"phone\": \"988774663\",\r\n\"password\": \"$2y$10$Ua/BHuUWpuDKt1JtZ6TIe./YAgOXStRfzcvwWWK1rkoXgNY63KsnO\",\r\n\"default_address\": {\r\n    \"address\": \"Unnamed Road, Cercado de Lima 15046, Peru\", \r\n    \"house\": \"456\", \r\n    \"latitude\": \"-12.0709585\", \r\n    \"longitude\": \"-77.0340339\", \r\n    \"tag\": \"trabajo\"\r\n    }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://budegom.com/public/api/register",
+					"protocol": "https",
+					"host": [
+						"budegom",
+						"com"
+					],
+					"path": [
+						"public",
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
